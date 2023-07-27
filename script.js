@@ -34,8 +34,11 @@ function Card(value, suit) {
     return deck;
   }
   
-  // Function to deal 5 random cards
-  function dealHand(deck) {
+  
+  const deck = createDeck();
+  
+  
+  function dealHand() {
     const hand = [];
     const drawnIndices = [];
   
@@ -52,8 +55,7 @@ function Card(value, suit) {
   }
   
   function drawHand() {
-    const deck = createDeck();
-    const hand = dealHand(deck);
+    const hand = dealHand();
     const handContainer = document.getElementById('hand');
     handContainer.innerHTML = '';
   
